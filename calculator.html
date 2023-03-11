@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator using JS</title>
+  <script src="/calculator.js"></script>
+    <link rel="stylesheet" type="text/css" href="./calculator.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="Container">
+    <h2>Calculator using HTML|CSS|JS </h2>
+    <div class="calcContainer">
+        <div class="row display"><input type="text" name="display" id="display" readonly dir="rtl" style="text-align: right;"> </div>
+    
+      <div class="row">
+        <input type="button" id="btn" value="AC" class="nonum" onclick="document.getElementById('display').value =''">
+        <input type="button" id="btn" value="DE" class="nonum" onclick="document.getElementById('display').value = display.value.toString().slice(0,-1)">
+        <input type="button" id="btn" value="." class="nonum" onclick="document.getElementById('display').value+='.'">
+        <input type="button" id="btn" value="/" class="nonum" onclick="document.getElementById('display').value+='/'">
+      </div>
+      <div class="row">
+        <input type="button" id="btn" value="7" onclick="document.getElementById('display').value+='7'">
+        <input type="button" id="btn" value="8" onclick="document.getElementById('display').value+='8'">
+        <input type="button" id="btn" value="9" onclick="document.getElementById('display').value+='9'">
+        <input type="button" id="btn" value="*" class="nonum" onclick="document.getElementById('display').value+='*'">
+      </div>
+      <div class="row">
+        <input type="button" id="btn" value="4" onclick="document.getElementById('display').value+='4'">
+        <input type="button" id="btn" value="5" onclick="document.getElementById('display').value+='5'">
+        <input type="button" id="btn" value="6" onclick="document.getElementById('display').value+='6'">
+        <input type="button" id="btn" value="-"class="nonum"  onclick="document.getElementById('display').value+='-'">
+      </div>
+      <div class="row">
+        <input type="button" id="btn" value="1" onclick="document.getElementById('display').value+='1'">
+        <input type="button" id="btn" value="2" onclick="document.getElementById('display').value+='2'">
+        <input type="button" id="btn" value="3" onclick="document.getElementById('display').value+='3'">
+        <input type="button" id="btn" value="+" class="nonum" onclick="document.getElementById('display').value+='+'">
+      </div>
+      <div class="row">
+        <input type="button" id="btn" value="00" onclick="document.getElementById('display').value+='00'">
+        <input type="button" id="btn" value="0" onclick="document.getElementById('display').value+='0'">
+        <input type="button" id="btn" class="eq nonum" value="=" onclick="document.getElementById('display').value =eval(display.value)">
+      </div>
+    </div>
+  </div>
+</body>
+</html>
